@@ -1,0 +1,50 @@
+body{
+  font-family: 'Lato',sans-serif;
+}
+
+.hide-scrollbar::-webkit-scrollbar{
+  display: none;
+}
+::-webkit-scrollbar{
+  width: 8px;
+}
+::-webkit-scrollbar-track{
+  background: transparent;
+}
+::-webkit-scrollbar-thumb{
+  background: #999;
+  border-radius: 50px;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+#logo:hover #logo-share{
+  animation: logo 750ms linear both;
+  display: inline-block;
+  transform: translate(100px,100px);
+}
+
+#logo:hover #logo-touch{
+  animation: logo 250ms 250ms linear both;
+  display: inline-block;
+  transform: translate(100px,100px);
+}
+
+@keyframes logo {
+  0%{
+    transform: translate(0,0) scaleX(1) scaleY(1);
+  }
+  33%{
+    transform: translate(-100%,0) scaleX(0) scaleY(0);
+  }
+  66%{
+    transform: translate(-100%,0) scaleX(0) scaleY(0);
+  }
+  100%{
+    transform: translate(0,0) scaleX(1) scaleY(1);
+  }
+}
